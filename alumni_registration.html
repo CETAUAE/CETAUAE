@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container img {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 150px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <!-- Logo Image -->
+        <img src="logo.png" alt="Logo">
+        <h2>Alumni Registration Form</h2>
+        <form action="submit_form.php" method="post">
+            <!-- Personal Details -->
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non-binary">Non-binary</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State/Province:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="INDIA">INDIA</option>
+                    <option value="UAE">UAE</option>
+		    <option value="USA">United States</option>
+                    <option value="CANADA">Canada</option>
+
+                    <!-- Add more countries as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="grad-year">Graduation Year:</label>
+                <input type="number" id="grad-year" name="grad_year" required>
+            </div>
+            <div class="form-group">
+                <label for="degree">Degree:</label>
+                <select id="degree" name="degree">
+                    <option value="bachelors">Bachelor's</option>
+                    <option value="masters">Master's</option>
+                    <option value="phd">Ph.D.</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="major">Major/Field of Study:</label>
+                <input type="text" id="major" name="major" required>
+            </div>
+
+            <!-- Professional Details -->
+            <div class="form-group">
+                <label for="employer">Current Employer:</label>
+                <input type="text" id="employer" name="employer" required>
+            </div>
+            <div class="form-group">
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" name="job_title" required>
+            </div>
+            <div class="form-group">
+                <label for="industry">Industry:</label>
+                <select id="industry" name="industry">
+                    <option value="it">IT</option>
+                    <option value="finance">Finance</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="education">Education</option>
+                    <!-- Add more industries as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" required>
+            </div>
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile:</label>
+                <input type="url" id="linkedin" name="linkedin">
+            </div>
+            <div class="form-group">
+                <label for="current-location">Current Location (City/Country):</label>
+                <input type="text" id="current-location" name="current_location" required>
+            </div>
+
+            <!-- Skill Set -->
+            <div class="form-group">
+                <label>Technical Skills:</label>
+                <input type="checkbox" name="skills" value="programming"> Programming Languages
+                <input type="checkbox" name="skills" value="data-analysis"> Data Analysis
+                <input type="checkbox" name="skills" value="project-management"> Project Management
+                <!-- Add more skills as needed -->
+            </div>
+            <div class="form-group">
+                <label>Soft Skills:</label>
+                <input type="checkbox" name="soft_skills" value="communication"> Communication
+                <input type="checkbox" name="soft_skills" value="leadership"> Leadership
+                <input type="checkbox" name="soft_skills" value="time-management"> Time Management
+                <!-- Add more skills as needed -->
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications:</label>
+                <textarea id="certifications" name="certifications" rows="4"></textarea>
+            </div>
+
+            <!-- Areas of Interest -->
+            <div class="form-group">
+                <label for="primary-interest">Primary Area of Interest:</label>
+                <select id="primary-interest" name="primary_interest">
+                    <option value="research">Research</option>
+                    <option value="startups">Startups</option>
+                    <option value="teaching">Teaching</option>
+                    <option value="community-service">Community Service</option>
+                    <!-- Add more interests as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Secondary Areas of Interest:</label>
+                <input type="checkbox" name="secondary_interests" value="research"> Research
+                <input type="checkbox" name="secondary_interests" value="startups"> Startups
+                <input type="checkbox" name="secondary_interests" value="teaching"> Teaching
+                <input type="checkbox" name="secondary_interests" value="community-service"> Community Service
+                <!-- Add more interests as needed -->
+            </div>
+            <div class="form-group">
+                <label for="other-interests">Other Interests:</label>
+                <textarea id="other-interests" name="other_interests" rows="4"></textarea>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="form-group">
+                <label>Would you like to be involved in alumni activities?</label>
+                <input type="radio" name="alumni_activities" value="yes"> Yes
+                <input type="radio" name="alumni_activities" value="no"> No
+            </div>
+            <div class="form-group">
+                <label>Would you be willing to mentor current students?</label>
+                <input type="radio" name="mentor_students" value="yes"> Yes
+                <input type="radio" name="mentor_students" value="no"> No
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments or Additional Information:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <!-- Consent and Submission -->
+            <div class="form-group">
+                <input type="checkbox" name="consent" required> I consent to have my information shared with the alumni association and university database.
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
